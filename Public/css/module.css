@@ -1,0 +1,128 @@
+/**
+ * 描    述：		定义常用组件样式
+ * 作用范围: 		公共，组件模块
+ * 默认包含组件：	表单，表格，按钮，标签页导航，面包屑，分页，分类管理树形菜单
+ * 模块搜索关键字： =
+ */
+
+/* = 表格（默认有斑马条纹）
+------------------------------------------ */
+.data-table {
+	margin: 10px 0;
+}
+.data-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.data-table caption {
+    height: 30px;
+    line-height: 30px;
+    font-weight: 700;
+}
+.data-table thead th,
+.data-table tbody td {
+    padding:8px;
+    height: 19px;
+    line-height: 19px;
+    font-weight: 400;
+}
+.data-table thead th {
+    text-align: left;
+    background-color: #ddd;
+}
+.data-table tbody tr {
+	background-color: #fefefe;
+	color: #686868;
+}
+.data-table tbody tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+/* 复选框的列宽 */
+.row-selected {
+    width: 15px;
+}
+
+
+/* = 标签导航
+------------------------------------------ */
+
+.tab-nav {
+  margin-bottom: 15px;
+  padding-left: 1px;
+  border-bottom: 1px solid #e0e0e0;
+}
+.tab-nav li {
+  margin-bottom: -1px;
+  margin-left: -1px;
+  float: left;
+}
+.tab-nav li a,
+.tab-nav li a:hover {
+  padding: 0 20px;
+  height: 35px;
+  line-height: 35px;
+  font-weight: bold;
+  font-size: 16px;
+  border: 1px solid transparent;
+  border-top-width: 2px;
+}
+.tab-nav .current a,
+.tab-nav .current a:hover {
+  border-color: #34b4e0 #e0e0e0 #f6f6f6;
+}
+.tab-content .tab-pane {
+  display: none;
+}
+.tab-content .in {
+  display: block;
+}
+
+.form-item{display: block;width: 100%;
+height: auto;}
+
+/* 普通表单 */
+.form-horizontal .form-item {
+  margin-bottom: 5px;
+}
+.form-horizontal .item-label {
+  display: block;
+  margin-right: 5px;
+  height: 30px;
+  line-height: 30px;
+  font-weight: bold;
+}
+.form-horizontal .item-label .check-tips {
+  margin-left: 8px;
+  color: #aaa;
+  font-weight: normal;
+}
+.form-horizontal .controls {
+  overflow: hidden;
+  padding: 5px 5px 5px 0;
+}
+.form-horizontal .controls label + label {
+  margin-left: 15px;
+}
+.form-horizontal .controls .check-tips {
+  margin-left: 20px;
+  color: #999;
+}
+label.textarea ~ .check-tips {
+  margin-left: 0;
+}
+.form-horizontal .controls .block.check-tips,
+.form-horizontal .controls .block.textarea {
+  display: block;
+  margin-left: 0;
+  margin-bottom: 10px;
+}
+.textarea textarea {
+  width: 97%;
+  min-width: 300px;
+  background-color: #f1f1f1;
+  height: 100px;
+  border: 0 none;
+}
+.cf:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.cf{*+height:1%;}
