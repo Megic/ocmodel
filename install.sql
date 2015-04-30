@@ -82,12 +82,15 @@ CREATE TABLE IF NOT EXISTS `oc_model` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='文档模型表' AUTO_INCREMENT=174 ;
 
 /*******菜单******/
+
 INSERT INTO `oc_menu` ( `title`, `pid`, `sort`, `url`, `hide`, `tip`, `group`, `is_dev`, `icon`) VALUES('模型管理', 74, 0, 'Model/index', 0, '', '数据模型', 0, '');
-INSERT INTO `oc_menu` (`title`, `pid`, `sort`, `url`, `hide`, `tip`, `group`, `is_dev`, `icon`) VALUES('新增模型', 74, 0, 'Model/add', 1, '', '数据模型', 0, '');
-INSERT INTO `oc_menu` (`title`, `pid`, `sort`, `url`, `hide`, `tip`, `group`, `is_dev`, `icon`) VALUES('生成模型', 74, 0, 'Model/generate', 1, '', '数据模型', 0, '');
-INSERT INTO `oc_menu` (`title`, `pid`, `sort`, `url`, `hide`, `tip`, `group`, `is_dev`, `icon`) VALUES('编辑模型', 74, 0, 'Model/edit/', 1, '', '数据模型', 0, '');
-INSERT INTO `oc_menu` (`title`, `pid`, `sort`, `url`, `hide`, `tip`, `group`, `is_dev`, `icon`) VALUES('模型数据', 74, 0, 'Think/lists/', 1, '', '数据模型', 0, '');
-INSERT INTO `oc_menu` (`title`, `pid`, `sort`, `url`, `hide`, `tip`, `group`, `is_dev`, `icon`) VALUES('增加模型数据', 74, 0, 'Think/add/', 1, '', '数据模型', 0, '');
-INSERT INTO `oc_menu` (`title`, `pid`, `sort`, `url`, `hide`, `tip`, `group`, `is_dev`, `icon`) VALUES('字段管理', 74, 0, 'Attribute/index/', 1, '', '数据模型', 0, '');
-INSERT INTO `oc_menu` (`title`, `pid`, `sort`, `url`, `hide`, `tip`, `group`, `is_dev`, `icon`) VALUES('字段编辑', 74, 0, 'Attribute/edit/', 1, '', '数据模型', 0, '');
-INSERT INTO `oc_menu` (`title`, `pid`, `sort`, `url`, `hide`, `tip`, `group`, `is_dev`, `icon`) VALUES('增加字段', 74, 0, 'Attribute/add/', 1, '', '数据模型', 0, '');
+set @tmp_id=0;
+select @tmp_id:= id from `oc_menu` where title = '模型管理';
+INSERT INTO `oc_menu` (`title`, `pid`, `sort`, `url`, `hide`, `tip`, `group`, `is_dev`, `icon`) VALUES('新增模型', @tmp_id, 0, 'Model/add', 1, '', '数据模型', 0, '');
+INSERT INTO `oc_menu` (`title`, `pid`, `sort`, `url`, `hide`, `tip`, `group`, `is_dev`, `icon`) VALUES('生成模型', @tmp_id, 0, 'Model/generate', 1, '', '数据模型', 0, '');
+INSERT INTO `oc_menu` (`title`, `pid`, `sort`, `url`, `hide`, `tip`, `group`, `is_dev`, `icon`) VALUES('编辑模型', @tmp_id, 0, 'Model/edit/', 1, '', '数据模型', 0, '');
+INSERT INTO `oc_menu` (`title`, `pid`, `sort`, `url`, `hide`, `tip`, `group`, `is_dev`, `icon`) VALUES('模型数据', @tmp_id, 0, 'Think/lists/', 1, '', '数据模型', 0, '');
+INSERT INTO `oc_menu` (`title`, `pid`, `sort`, `url`, `hide`, `tip`, `group`, `is_dev`, `icon`) VALUES('增加模型数据', @tmp_id, 0, 'Think/add/', 1, '', '数据模型', 0, '');
+INSERT INTO `oc_menu` (`title`, `pid`, `sort`, `url`, `hide`, `tip`, `group`, `is_dev`, `icon`) VALUES('字段管理', @tmp_id, 0, 'Attribute/index/', 1, '', '数据模型', 0, '');
+INSERT INTO `oc_menu` (`title`, `pid`, `sort`, `url`, `hide`, `tip`, `group`, `is_dev`, `icon`) VALUES('字段编辑', @tmp_id, 0, 'Attribute/edit/', 1, '', '数据模型', 0, '');
+INSERT INTO `oc_menu` (`title`, `pid`, `sort`, `url`, `hide`, `tip`, `group`, `is_dev`, `icon`) VALUES('增加字段', @tmp_id, 0, 'Attribute/add/', 1, '', '数据模型', 0, '');
