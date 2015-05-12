@@ -213,7 +213,7 @@ class ModelController extends AdminController {
 
 		$name = strtolower ( $name );
 		if ($type == 1) {
-			$sql = "DELETE FROM `{$prefix}attribute` WHERE model_id = (SELECT id FROM {$prefix}model WHERE `name`='{$model['name']}' ORDER BY id DESC LIMIT 1);\r\n";
+			$sql = "DELETE FROM `{$prefix}attribute` WHERE model_id = (SELECT id FROM `{$prefix}model` WHERE `name`='{$model['name']}' ORDER BY id DESC LIMIT 1);\r\n";
 			$sql .= "DELETE FROM `{$prefix}model` WHERE `name`='{$model['name']}' ORDER BY id DESC LIMIT 1;\r\n";
 			$sql .= "DROP TABLE IF EXISTS `{$prefix}" . strtolower ( $name ) . "`;";
 			$path = RUNTIME_PATH . 'uninstall.sql';
